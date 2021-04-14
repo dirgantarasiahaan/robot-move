@@ -8,12 +8,12 @@ public class Main {
     public static void main(String[] args) {
 
         Position initialPosition = new Position(2,3);
-        Direction direction = Direction.EAST;
+        Direction direction = Direction.NORTH;
 
         Robot robot = new Robot(initialPosition, direction);
         System.out.println(robot);
 
-        robot.move("A");
+        robot.move("R");
         System.out.println(robot);
 
     }

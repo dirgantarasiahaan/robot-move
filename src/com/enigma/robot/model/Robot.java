@@ -30,5 +30,31 @@ public class Robot {
                 position = position.getLeft();
             }
         }
+
+        if (command.equals("R")){
+            switch (direction){
+                case EAST: direction = Direction.SOUTH;
+                break;
+                case NORTH: direction = Direction.EAST;
+                break;
+                case SOUTH: direction = Direction.WEST;
+                break;
+                case WEST: direction = Direction.NORTH;
+                break;
+            }
+        }
+
+//        if (command.equals("L")){
+//            switch (direction){
+//                case EAST: direction = Direction.SOUTH;
+//                    break;
+//                case NORTH: direction = Direction.WEST;
+//                    break;
+//                case SOUTH: direction = Direction.WEST;
+//                    break;
+//                case WEST: direction = Direction.NORTH;
+//                    break;
+//            }
+//        }
     }
 }
