@@ -15,46 +15,30 @@ public class Robot {
         return direction + "->" + position;
     }
 
-    public void move(String command) {
-        if (command.equals("A")){
-            if (this.direction==Direction.EAST){
-                position = position.getRight();
-            }
-            if (this.direction==Direction.NORTH){
-                position = position.getTop();
-            }
-            if (this.direction==Direction.SOUTH){
-                position = position.getBottom();
-            }
-            if (this.direction==Direction.WEST){
-                position = position.getLeft();
-            }
+    public void move(String commandString) {
+        Command command =  Command.valueOf(commandString);
+        switch (command){
+            case A:forward();
+                    break;
+            case L:direction = direction.turnLeft();
+                    break;
+            case R: direction = direction.turnRight();
+                    break;
         }
+    }
 
-        if (command.equals("R")){
-            switch (direction){
-                case EAST: direction = Direction.SOUTH;
-                break;
-                case NORTH: direction = Direction.EAST;
-                break;
-                case SOUTH: direction = Direction.WEST;
-                break;
-                case WEST: direction = Direction.NORTH;
-                break;
-            }
+    private void forward() {
+        if (this.direction==Direction.EAST){
+            position = position.getRight();
         }
-
-        if (command.equals("L")){
-            switch (direction){
-                case EAST: direction = Direction.NORTH;
-                    break;
-                case NORTH: direction = Direction.WEST;
-                    break;
-                case SOUTH: direction = Direction.EAST;
-                    break;
-                case WEST: direction = Direction.SOUTH;
-                    break;
-            }
+        if (this.direction==Direction.NORTH){
+            position = position.getTop();
+        }
+        if (this.direction==Direction.SOUTH){
+            position = position.getBottom();
+        }
+        if (this.direction==Direction.WEST){
+            position = position.getLeft();
         }
     }
 
