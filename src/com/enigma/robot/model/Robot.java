@@ -16,16 +16,18 @@ public class Robot {
     }
 
     public void move(String commandString) {
-        Command command =  Command.valueOf(commandString);
-        switch (command){
-            case A:forward();
+        try {
+            Command command =  Command.valueOf(commandString);
+            switch (command){
+                case A:forward();
                     break;
-            case L:direction = direction.turnLeft();
+                case L:direction = direction.turnLeft();
                     break;
-            case R: direction = direction.turnRight();
+                case R: direction = direction.turnRight();
                     break;
-            default:
-                System.out.println("Command Not Found");
+            }
+        } catch (Exception e){
+            System.out.println("Command Not Found");
         }
     }
 
