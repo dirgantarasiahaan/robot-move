@@ -24,6 +24,8 @@ public class Robot {
                     break;
             case R: direction = direction.turnRight();
                     break;
+            default:
+                System.out.println("Command Not Found");
         }
     }
 

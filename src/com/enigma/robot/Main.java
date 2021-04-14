@@ -17,6 +17,7 @@ public class Main {
 //        System.out.println(robot);
 
         robot.moves("AAARAA");
+        System.out.println(robot);
 
     }
 }
