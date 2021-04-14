@@ -13,7 +13,7 @@ public class Main {
         Robot robot = new Robot(initialPosition, direction);
         System.out.println(robot);
 
-        robot.move("R");
+        robot.move("L");
         System.out.println(robot);
 
     }
