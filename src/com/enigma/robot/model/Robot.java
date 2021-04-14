@@ -57,4 +57,12 @@ public class Robot {
             }
         }
     }
+
+    public void moves(String commands) {
+        String[] commandsArray = commands.split("");
+        for (String command : commandsArray){
+            move(command);
+            System.out.println(this.toString());
+        }
+    }
 }

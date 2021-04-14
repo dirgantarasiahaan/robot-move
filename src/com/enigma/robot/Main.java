@@ -11,10 +11,12 @@ public class Main {
         Direction direction = Direction.NORTH;
 
         Robot robot = new Robot(initialPosition, direction);
-        System.out.println(robot);
+//        System.out.println(robot);
 
-        robot.move("L");
-        System.out.println(robot);
+//        robot.move("L");
+//        System.out.println(robot);
+
+        robot.moves("AAARAA");
 
     }
 }
